@@ -1,0 +1,53 @@
+@charset "utf-8";
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  line-height: 100px;
+  font-size: 56px;
+  color: #fff;
+  text-align: center;
+}
+body {
+  background-color:pink;
+}
+  
+.link {
+  border-style:ridge none ridge none;
+  padding: 0.3em;
+  border-width:4px;
+  background-color:hotpink;
+  border-color:pink;
+}
+.snsname {
+  padding:1em
+  text-align:center;
+  font-size:xx-large;
+  background-color:rightpink;
+}
+a {
+  color:royalblue;
+}
+.footer {
+  text-align:center;
+}
+.fa-twitter {
+  background-color:#55acee;
+  color:#fff;
+  }
+.fa-instagram {
+  background:radial-gradient(at 20% 120%,orange, #f15a4d 25%, #f13f79 55%, #9933ff 100%) no-repeat;
+  border-radius:20%;
+  color:#fff;
+  }
+.fa-github {
+  color:#000000;
+  background-color:#ffffff;
+  }
+.fa-discord {
+  color:#7289da;
+  background-color:#ffffff;
+  }

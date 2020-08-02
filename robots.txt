@@ -1,0 +1,5 @@
+# robots.txt for https://soratako.yunachannel.com/
+User-agent: * 
+Allow: /
+
+Sitemap: https://soratako.yunachannel.com/sitemap.xml
