@@ -14,7 +14,16 @@
 body {
   background-color:pink;
 }
-  
+.pagelink {
+  background:#ffffff;
+  width: 100%;
+  margin-bottom:5px;
+  border:solid 2px red;
+}
+.pagelink a {
+  color:#0000EE;
+  font-size:2em;
+}
 .link {
   border-style:ridge none ridge none;
   padding: 0.3em;
