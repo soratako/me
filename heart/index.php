@@ -1,4 +1,7 @@
-<!DOCTYPE html><html prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#" dir="ltr" lang="ja">
+<?php
+$lang = $_GET["lang"];
+?>
+<!DOCTYPE html><html prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#" dir="ltr" lang="<?php if ($lang === "en") {echo "en";}else{echo "ja";}?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -9,19 +12,19 @@
   <!-- End Bot -->
   <!-- meta -->
   <meta name="keywords" content="誹謗中傷">
-  <meta name="description" content="誹謗中傷に関するそらたこの考え">
+  <meta name="description" content="<?php if ($lang === "en") {echo "My opinion about defamation (slanders and libels)";}else{echo "誹謗中傷に関するそらたこの考え";}?>">
   <!-- End meta -->
   <!-- ogp, Twitter tags -->
-  <meta property="og:title" content="誹謗中傷に関するそらたこの考え">
-  <meta property="og:description" content="誹謗中傷に関するそらたこの考え">
+  <meta property="og:title" content="<?php if ($lang === "en") {echo "My opinion about defamation (slanders and libels)";}else{echo "誹謗中傷に関するそらたこの考え";}?>">
+  <meta property="og:description" content="<?php if ($lang === "en") {echo "My opinion about defamation (slanders and libels)";}else{echo "誹謗中傷に関するそらたこの考え";}?>">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://soratako.yunachannel.com/heart/">
+  <meta property="og:url" content="https://soratako.yunachannel.com/heart/<?php if ($lang === "en") {echo "?lang=en";}?>">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="@Sierra9Indiaa">
   <!-- /ogp, Twitter tags -->
 
-  <title>誹謗中傷に関するそらたこの考え</title>
-  <link rel="canonical" href="https://soratako.yunachannel.com/heart/">
+  <title><?php if ($lang === "en") {echo "My opinion about defamation (slanders and libels)";}else{echo "誹謗中傷に関するそらたこの考え";}?></title>
+  <link rel="canonical" href="https://soratako.yunachannel.com/heart/<?php if ($lang === "en") {echo "?lang=en";}?>">
   <!-- Exte JS CSS -->
   <link rel="stylesheet" href="/style.css" />
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
@@ -37,10 +40,11 @@
 　　});
   </script>
 <div class="heart" id="contents">
-<h1>誹謗中傷に関するそらたこの考え</h1>
+<h1 class="langja" lang="ja">誹謗中傷に関するそらたこの考え</h1>
+<h1 class="langen" lang="en">My opinion about defamation (slanders and libels)</h1>
 <!-- body -->
 <?php 
-  $modifiedtimen = new DateTime("2020-09-10");
+  $modifiedtimen = new DateTime("2020-09-11");
   $modifiedtime = $modifiedtimen->format(DateTime::ATOM);
 ?>
  <div class="date-tags">
@@ -49,11 +53,13 @@
   $modifiedtimeformat = DateTime::createFromFormat($dateformat,$modifiedtime);
   echo $modifiedtimeformat->format("Y.m.d"); ?></time> <span class="far fa-clock" aria-hidden="true"></span> <span class="published"><meta itemprop="datePublished" content="2020-09-10T21:50:27+09:00">2020.09.10</span>
   </div>
-<p>2020年現在、インターネット上でよく見られる、「誹謗中傷」についてのそらたこの考えです。</p>
-<p>Tik TokなどのSNSでよく見かける言葉として、「有名になったら誹謗中傷は仕方ない」、「誹謗中傷される覚悟を持って投稿をするべきだ」というものがあります。私はこの言葉を聞いて、その通りだと思います。有名になるということはより多くの人の目に入ると言うことです。世の中にはさまざまな考えがあり、1人1人の考えは皆違います。自分にとっての当たり前のことは自分以外の全ての人にとっての当たり前ではありません。他の誰かにとってはあり得ないことかもしれません。さまざまな考えを持つ人の中には誹謗中傷と気づかず、相手を傷つけていると知らずに発言している人もいます。相手を罵って誹謗中傷することを生きがいとしているような頭のおかしい人もいます。YouTubeの低評価で考えてみてください。10万、100万再生されている動画で低評価が1つもついていないものがありますか？まずないと言っていいでしょう。それが見たあなたにとってどんなにいい動画であったとしても他の誰かにとっては低評価をつけるに値する動画であったということです。このように自分と違う考えを持つ人が必ずいることを認めなくてはいけません。有名になるということはより多くの人の目にとまることです。インターネットに投稿をするということはいくら自分がそれを意図していないとしても自分以外の誰かに向けて発信するということです。自分と違う考えを持つ人が自分が投稿、発信した内容を目にしたとき、誹謗中傷をしてくる可能性は十分あります。より多くの人がその投稿、発信を見るということはより誰かに誹謗中傷される可能性が高まるということです。そのため、インターネットに投稿すること、有名になること、には誹謗中傷される覚悟を持つ必要があると思います。<br>
-では、それらの誹謗中傷を当たり前にしていいのでしょうか？当たり前にしてはいけないと私は思います。自分と違う、自分の当たり前と違う、それを認めず、批判する発言が誹謗中傷につながります。相手の考えを認めそれを尊重することができなければ、自分が誹謗中傷をする側になってしまいます。それぞれが相手の考えを認め合う必要があります。Tik TokやYouTubeなどではコメント欄を閉鎖することで誹謗中傷をされないことができます。しかし、これは誹謗中傷以外の意見や感想も一律に省いてしまいます。Tik TokやTwitterなどでは特定の自分が繋がっている人からのコメントのみを受けつけつけることができます。それらの機能を使うことは逃げではありません。誹謗中傷は有名になった証であるという言い方をする人がいます。確かにそういう言い方もできると思います。より多くの人の目について、より多くの視点から意見がよせられる、その意見の中に誹謗中傷も含まれているかもしれません。しかし、それは当たり前にしていいことではありません。<p>
+<p class="langja" lang="ja">2020年現在、インターネット上でよく見られる、「誹謗中傷」についてのそらたこの考えです。</p>
+<p class="langja" lang="ja">Tik TokなどのSNSでよく見かける言葉として、「有名になったら誹謗中傷は仕方ない」、「誹謗中傷される覚悟を持って投稿をするべきだ」というものがあります。私はこの言葉を聞いて、その通りだと思います。投稿を通して有名になるということは投稿がより多くの人の目に入ると言うことです。世の中にはさまざまな考えがあり、1人1人の考えは皆違います。自分にとっての当たり前のことは自分以外の全ての人にとっての当たり前ではありません。それどころか他の誰かにとってはあり得ないことかもしれません。さまざまな考えを持つ人の中には誹謗中傷と気づかず、相手を傷つけていると知らずに発言している人もいます。相手を罵って誹謗中傷することを生きがいとしているような頭のおかしい人もいると思います。YouTubeの低評価で考えてみてください。10万、100万再生されている動画で低評価が1つもついていないものがありますか？まずないと言っていいでしょう。その動画があなたにとってどんなにいいものであるとしても他の誰かにとっては低評価をつけるに値する動画であるということです。このように自分と違う考えを持つ人は必ずいて、それを認めなくてはいけません。繰り返しますが、有名になるということは投稿がより多くの人の目にとまることです。インターネットに投稿をするということはいくら自分が意図していないとしても自分以外の不特定多数の誰かに向けて発信するということです。自分と違う考えを持つ人が自分が投稿、発信した内容を目にしたとき、誹謗中傷をしてくる可能性は十分あります。より多くの人がその投稿、発信を見るということは誰かに誹謗中傷される可能性がより高まるということです。そのため、インターネットに投稿すること、有名になること、には誹謗中傷される覚悟を持つ必要があると思います。<br>
+では、それらの誹謗中傷を当たり前にしていいのでしょうか？当たり前にしてはいけないと私は思います。それらの言葉を使って誹謗中傷を正当化していいのでしょうか？誹謗中傷を正当化してはいけないと思います。自分と違う、自分の当たり前と違う、それを認めず批判する発言が誹謗中傷につながります。相手の考えを認めそれを尊重することができなければ、自分が誹謗中傷をする側になってしまいます。相手の考えを認め、相手にも自分の考えを認めてもらう必要があります。認めるとはそういう考えがあることを理解することです。納得できないのであれば、自分の意見にする必要はありません。ただ、自分と違う意見を言った相手を罵ったり、馬鹿にしたり、中傷したり、しないでください。Tik TokやYouTubeなどではコメント欄を閉鎖することで誹謗中傷をされないことができます。しかし、この方法は誹謗中傷以外の意見や感想も一律に省いてしまいます。Tik TokやTwitterなどでは特定の自分が繋がっている人からのコメントのみを受けつけつけることができます。自分と異なる意見は入りにくくなるでしょう。これらの機能やブロック、ミュート機能を使うことは決して逃げではありません。使うことが自分の安全につながるかもしれません。しかし、これらの機能を使わなくても、暖かく、それぞれがお互いを認め合える、素晴らしいコメントに溢れたコメント欄になったらSNSはもっと便利で多くの人の役に立つでしょう。誹謗中傷は有名になった証であるという言い方をする人がいます。確かにそういう言い方もできると思います。より多くの人の目について、より多くの視点から意見がよせられる、その意見の中に誹謗中傷も含まれているかもしれません。しかし、それは当たり前にしていいことではありません。その誹謗中傷に他人を中傷する意図はないかもしれません、中傷する意図があったとしてもなかったとしても言われた相手は傷つきます。その誹謗中傷見た人もいい気分にはなりません。あなたが言った言葉が人を深く傷つけます。もしかしたら、軽い気持ちで言ったのかもしれません。言われた側は軽くすませられる言葉ではないです。発言の前にしっかりと考えて、その発言が本当に必要なのか、その発言によって傷つく人はいないか、その発言をして自分はどうなるのか、などを確認してください。</p>
+<p class="langja" lang="ja">あなたがもし、他の誰かよりちょっと影響力があるのなら、誹謗中傷をやめるよう呼びかけてみてください。あなたに友達がいるのなら誹謗中傷がなぜダメなのかについて話題にしてみてください。あなたのちょっとの働きかけで誹謗中傷が少なくできます。</p>
+<p class="langen" lang="en"></p>
 
-<p>インターネットで他人を悪くいう内容や他人をばかにする内容を書込むことは名誉毀損に当たります。名誉毀損をすると賠償を命じられる可能性があります。安易な発言が誹謗中傷とみなされて、賠償をしなければいけなくなるのです。インターネットでの誹謗中傷は、絶対にやめましょう。インターネットは便利なツールですが、非常に厄介で奥の深いツールでもあります。インターネットでは一度送信したことは取り消すことができません。永遠に残り続けます。投稿の削除やアカウントの削除をしても自分がした発言は完全には消えません。安易な発言は自分の身を滅ぼします。</p>
+<p class="langja" lang="ja">インターネットで他人を悪くいう内容や他人をばかにする内容を書込むことは名誉毀損に当たります。名誉毀損をすると賠償を命じられる可能性があります。安易な発言が誹謗中傷とみなされて、賠償をしなければいけなくなります。インターネットでの誹謗中傷は、絶対にやめましょう。インターネットでの発言はしっかりと考えてしましょう。インターネットは便利なツールですが、非常に厄介で奥の深いツールでもあります。インターネットでは一度送信したことは取り消すことができません。永遠に残り続けます。投稿の削除やアカウントの削除をしても自分がした発言は完全には消えません。安易な発言は自分の身を滅ぼします。</p>
 <!-- End body -->
 <footer>
 <div id="back-to-previous" class="back-to-previous" style="display:inline-block;">
@@ -106,6 +112,31 @@ function historyDisable(){
     }
 }
 </script>
+<script>
+window.onload = function() {
+const langparameter = location.search.substring(1);
+const langele = document.documentElement.getAttribute("lang");
+const langelelang = "lang=" + langele;
+const langja = document.getElementsByClassName("langja");
+const langen = document.getElementsByClassName("langen");
+if (langparameter == langelelang) {
+ for(var i = 0; i < langen.length; i++) {
+ langen[i].style.display = "";
+ }
+ for(var i = 0; i < langja.length; i++) {
+ langja[i].style.display = "none";
+ }
+    }else{
+ for(var i = 0; i < langen.length; i++) {
+ langen[i].style.display = "none";
+ }
+ for(var i = 0; i < langja.length; i++) {
+ langja[i].style.display = "";
+ }
+    }
+}
+</script>
+</style>
 <div class="footer">
 <p id="copyright">
 &copy;(C) 2020<script>new Date().getFullYear()>2020&&document.write("-"+new Date().getFullYear());</script> Soratako.
