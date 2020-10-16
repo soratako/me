@@ -1,4 +1,6 @@
 <?php
+echo "<h1>404 Not Found</h1>";
+exit;
 $lang = $_GET["lang"];
 $modifiedtimen = new DateTime("2020-09-12");
 $modifiedtime = $modifiedtimen->format(DateTime::ATOM);
@@ -29,7 +31,7 @@ $modifiedtime = $modifiedtimen->format(DateTime::ATOM);
   <link rel="canonical" href="https://soratako.yunachannel.com/heart/<?php if ($lang === "en") {echo "?lang=en";}?>">
   <!-- Exte JS CSS -->
   <link rel="stylesheet" href="/style.css" />
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+  <!--<script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>-->
   <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
   <!-- /Exte JS CSS -->
 </head>
@@ -58,7 +60,13 @@ $modifiedtime = $modifiedtimen->format(DateTime::ATOM);
 
 <p class="langja" lang="ja">インターネットで他人を誹謗中傷することは名誉毀損に当たります。名誉毀損をすると賠償を命じられる可能性があります。安易な発言が誹謗中傷とみなされて、賠償をしなければいけなくなります。インターネットでの誹謗中傷は、絶対にやめましょう。インターネットでの発言はしっかりと考えてしましょう。インターネットは便利なツールですが、非常に厄介で奥の深いツールでもあります。インターネットでは一度送信したことは取り消すことができません。永遠に残り続けます。投稿の削除やアカウントの削除をしても自分がした発言は完全には消えません。安易な発言は自分の身を滅ぼします。</p>
 
-<p class="langen" lang="en">Sorry. This page is currently being prepared for publication. Please read <a href="/heart/">the Japanese version</a> instead. </p>
+<p class="langen" lang="en" style="font-size:x-large;font-weight:bold;">Sorry. This page is currently being prepared for publication.<br>Please read <a href="/heart/">the Japanese version</a> <span style="font-size:initial;">(<a href="https://translate.googleusercontent.com/translate_c?sl=ja&tl=en&u=https://soratako.yunachannel.com/heart/" target="_blank" rel="noreferrer noopener">translated version by Google Translate</a>)</span> instead.</p>
+<p class="langen" lang="en">Libel and slander problems on the Internet, such as Tik Tok, are often seen. In this page, I considered the these problems.</p>
+<p class="langen" lang="en">Words often seen on social media such as Tik Tok are "If you want to become famous, you have to get prepared to be slandered," and "Before posting, you should be prepared to be slandered," "If you are famous, it is impossible not to be slandered." I think that's right. Being famous through posts means that the posts will be seen by more people. Each person has different opinions, and you and others are different. On the contrary, your opinion may be totally unacceptable to someone else. Posting on the Internet means sending to an unspecified number of people, no matter how much you do not intend. </p>
+<p class="langen" lang="en">
+Slandering others on the Internet is defamation. Defamation may result in compensation. Never slander on the Internet. Think carefully about what you say on the Internet. Information published on the Internet is viewed by an unspecified number of people. It can be incredibly difficult to delete content once posted on the Internet. Even if you delete your post or account, the remarks you made on the internet will remain forever.
+Slandering others on the Internet is defamation. Defamation may result in compensation. You should never slander on the Internet. Think carefully about what you will say on the Internet. Information published on the Internet is viewed by an unspecified number of people. It can be incredibly difficult to delete content once posted on the Internet. Even if you delete your post or your account, the remarks you made on the internet will remain forever.
+</p>
 <!-- End body -->
 <footer>
 <div id="back-to-previous" class="back-to-previous" style="display:inline-block;">

@@ -50,6 +50,8 @@ body {
   width: 100%;
   height:7%;
   background-color: hotpink;
+  opacity:0.7;
+  z-index: 5;
 }
 .heart .back-to-previous,.back-to-next,.home-menu,.go-to-top {
   display:flex;
@@ -101,17 +103,24 @@ a {
 .fa-twitter {
   background-color:#55acee;
   color:#fff;
-  }
+}
 .fa-instagram {
   background:radial-gradient(at 20% 120%,orange, #f15a4d 25%, #f13f79 55%, #9933ff 100%) no-repeat;
   border-radius:20%;
   color:#fff;
-  }
+}
 .fa-github {
   color:#000000;
   background-color:#ffffff;
-  }
+}
 .fa-discord {
   color:#7289da;
   background-color:#ffffff;
-  }
+}
+@media screen and (min-width:768px) {
+.twitter-timeline {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 400px !important;
+}
+}
