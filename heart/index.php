@@ -1,5 +1,5 @@
 <?php
-echo "<h1>404 Not Found</h1>";
+echo "<html><head></head><body><h1>Not Found</h1></body></html>";
 exit;
 $lang = $_GET["lang"];
 $modifiedtimen = new DateTime("2020-09-12");

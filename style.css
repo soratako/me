@@ -13,8 +13,17 @@
 }
 body {
   background-color:pink;
+  margin:0;
   width:100vw;
   height:100vh;
+}
+h1 {
+  margin-right:0.5em;
+  margin-left:0.5em;
+}
+h2 {
+  margin-right:0.5em;
+  margin-left:0.5em;
 }
 .heart .loading {
   background-color: #0bd;
@@ -82,25 +91,6 @@ body {
 .pagelink a {
   color:#0000EE;
   font-size:2em;
-}
-.linka {
-  border-style:ridge none ridge none;
-  padding: 0.3em;
-  border-width:4px;
-  background-color:hotpink;
-  border-color:pink;
-}
-.snsname {
-  padding:1em
-  text-align:center;
-  font-size:xx-large;
-  background-color:rightpink;
-}
-a .snsname {
-  color:royalblue;
-}
-a,a:hover,a:visited .linka {
-  text-decoration: none;
 }
 .link { 
   color: #ffffff;
@@ -171,10 +161,10 @@ svg .link-note {
 }
 @media screen and (min-width:768px) {
 .twitter-timeline {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 400px !important;
-    float: right;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 400px !important;
+  float: right;
 }
 .scroll {
   display:none;
