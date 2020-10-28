@@ -20,10 +20,12 @@ body {
 h1 {
   margin-right:0.5em;
   margin-left:0.5em;
+  font-family: 'Kosugi Maru', sans-serif;
 }
 h2 {
   margin-right:0.5em;
   margin-left:0.5em;
+  font-family: 'Roboto Slab', serif;
 }
 .heart .loading {
   background-color: #0bd;
@@ -91,6 +93,7 @@ h2 {
 .pagelink a {
   color:#0000EE;
   font-size:2em;
+  font-family: 'Heebo', sans-serif;
 }
 .link { 
   color: #ffffff;
