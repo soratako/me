@@ -1,6 +1,6 @@
 <?php
-echo "<html><head></head><body><h1>Not Found</h1></body></html>";
-exit;
+/*echo "<html><head></head><body><h1>Not Found</h1></body></html>";
+exit;*/
 $lang = $_GET["lang"];
 $modifiedtimen = new DateTime("2020-09-12");
 $modifiedtime = $modifiedtimen->format(DateTime::ATOM);
