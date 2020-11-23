@@ -123,16 +123,16 @@ h2 {
   text-align: center;
 }
 .link-twitter {
-  background-color:#55acee;
   color:#ffffff;
+  background-color:#55acee;
 }
 .link-instagram {
-  background:radial-gradient(at 20% 120%,orange, #f15a4d 25%, #f13f79 55%, #9933ff 100%) no-repeat;
   color:#ffffff;
+  background:radial-gradient(at 20% 120%,orange, #f15a4d 25%, #f13f79 55%, #9933ff 100%) no-repeat;
 }
 .link-youtube {
-  background:#ffffff;
   color:#ff0000;
+  background-color:#ffffff;
 }
 .link-github {
   color:#000000;
@@ -140,6 +140,10 @@ h2 {
 }
 .link-tiktok {
   color:#000000;
+  background-color:#ffffff;
+}
+.link-pinterest {
+  color:#ff0000;
   background-color:#ffffff;
 }
 .link-disqus {
