@@ -16,6 +16,7 @@ body {
   margin:0;
   width:100vw;
   height:100vh;
+  -webkit-text-size-adjust: 100%;
 }
 h1 {
   margin-right:0.5em;
@@ -27,34 +28,34 @@ h2 {
   margin-left:0.5em;
   font-family: 'Roboto Slab', serif;
 }
-.heart .loading {
+.pages .loading {
   background-color: #0bd;
 }
-.heart h1 {
-  margin-top:1em;
+.pages h1 {
+  margin-top:1.5em;
   margin-right:0.5em;
   margin-left:0.5em;
   font-size:1.8em;
 }
-.heart p {
+.pages p {
   margin-right:1.5em;
   margin-left:1.5em;
 }
-.heart .date-tags {
+.pages .date-tags {
   margin-right:2em;
   text-align:right;
 }
-.heart .date-tags span {
+span .pages .date-tags {
   padding:auto 5px;
 }
-.heart .date-tags .fas {
+.pages .date-tags .fas {
   color:black;
 }
-.heart .footer {
+.pages .footer {
   text-align: center;
   padding-bottom:10%;
 }
-.heart footer {
+footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -64,7 +65,7 @@ h2 {
   opacity:0.7;
   z-index: 5;
 }
-.heart .back-to-previous,.back-to-next,.home-menu,.go-to-top {
+.pages .back-to-previous,.back-to-next,.home-menu,.go-to-top {
   display:flex;
   width: calc((100% - 8em + 20px) / 4);
   margin-top:auto;
@@ -73,13 +74,13 @@ h2 {
   padding-right:10px;
   text-align: center;
 }
-.heart .back-to-previous-button,.back-to-next-button,.home-menu-button,.go-to-top-button {
+.pages .back-to-previous-button,.back-to-next-button,.home-menu-button,.go-to-top-button {
   font-size:2em;
 }
-.heart .fas {
+.pages .fas {
   color:olive;
 }
-.heart #fasdisabled .fas {
+.pages .fas #fasdisabled {
   color:#dddddd !important;
 }
 .pagelink {
@@ -121,6 +122,18 @@ h2 {
   display: inline-block;
   width: 240px;
   text-align: center;
+}
+@media screen and (max-width:350px) {
+.link {
+  display:inline;
+  background-color:transparent;
+}
+.link-icon {
+  margin:5px auto;
+}
+.link-name {
+  display: none;
+}
 }
 .link-twitter {
   color:#ffffff;
