@@ -1,4 +1,6 @@
 @charset "utf-8";
+
+/* All */
 .loading {
   position: fixed;
   top: 50%;
@@ -28,6 +30,7 @@ h2 {
   margin-left:0.5em;
   font-family: 'Roboto Slab', serif;
 }
+/* Only .pages */
 .pages .loading {
   background-color: #0bd;
 }
@@ -45,7 +48,7 @@ h2 {
   margin-right:2em;
   text-align:right;
 }
-span .pages .date-tags {
+.pages .date-tags span {
   padding:auto 5px;
 }
 .pages .date-tags .fas {
@@ -55,7 +58,7 @@ span .pages .date-tags {
   text-align: center;
   padding-bottom:10%;
 }
-footer {
+ .pages footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -65,7 +68,7 @@ footer {
   opacity:0.7;
   z-index: 5;
 }
-.pages .back-to-previous,.back-to-next,.home-menu,.go-to-top {
+.pages footer .back-to-previous,.back-to-next,.home-menu,.go-to-top {
   display:flex;
   width: calc((100% - 8em + 20px) / 4);
   margin-top:auto;
@@ -74,15 +77,16 @@ footer {
   padding-right:10px;
   text-align: center;
 }
-.pages .back-to-previous-button,.back-to-next-button,.home-menu-button,.go-to-top-button {
+.pages footer .back-to-previous-button,.back-to-next-button,.home-menu-button,.go-to-top-button {
   font-size:2em;
 }
-.pages .fas {
+.pages footer .fas {
   color:olive;
 }
-.pages .fas #fasdisabled {
+.pages footer #fasdisabled .fas {
   color:#dddddd !important;
 }
+/* Notice */
 .pagelink {
   background:#ffffff;
   width: calc(100% - 4px - 8px) ;
@@ -96,6 +100,7 @@ footer {
   font-size:2em;
   font-family: 'Heebo', sans-serif;
 }
+/* Links */
 .link { 
   color: #ffffff;
   display: inline-block;
@@ -173,9 +178,11 @@ svg .link-note {
 .links {
   display: block;
 }
+/* footer */
 .footer {
   text-align:center;
 }
+/* Desktop */
 @media screen and (min-width:768px) {
 .twitter-timeline {
   margin-right: auto;
