@@ -182,18 +182,60 @@ svg .link-note {
 .footer {
   text-align:center;
 }
+.footer .nav a {
+  display: block;
+  text-decoration:none;
+  padding: 0 10px;
+  color: #fff;
+}
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background:#600000;
+}
+@media only screen and (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+  .footer .nav li {
+    border-top: 2px solid #000000;
+  }
+  .footer .nav li:last-child {
+    border-bottom: 2px solid #000000;
+  }
+  .footer .nav li a {
+    padding: 12px 20px;
+    text-align: left;
+  }
+}
 /* Desktop */
 @media screen and (min-width:768px) {
-.twitter-timeline {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 400px !important;
-  float: right;
-}
-.scroll {
-  display:none;
-}
-.link {
-  float: left;
-}
+  .twitter-timeline {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 400px !important;
+    float: right;
+  }
+  .scroll {
+    display:none;
+  }
+  .link {
+    float: left;
+  }
+  .footer .nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
 }
