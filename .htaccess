@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteEngine On
+RewriteCond %{THE_REQUEST} ^.*/index.(html|php)
+RewriteRule ^(.*)index.(html|php)$ https://%{HTTP_HOST}/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.soratako.yunachannel.com$
+RewriteRule ^(.*)$ https://soratako.yunachannel.com/$1 [R=301,L]
+ErrorDocument 400 /error/400/
+ErrorDocument 403 /error/403/
+ErrorDocument 404 /error/404/
+ErrorDocument 503 /error/503/
