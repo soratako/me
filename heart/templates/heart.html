@@ -1,0 +1,145 @@
+<!DOCTYPE html><html prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#" dir="ltr" lang="<?= $page_title ?>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="author" content="<?= $page->author ?>">
+   <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <!-- Bot -->
+  <meta name="robots" content="all" />
+  <!-- /Bot -->
+  <!-- meta -->
+  <meta name="keywords" content="<?= $page->keywords ?>">
+  <meta name="description" content="<?= $page->description ?>">
+  <!-- /meta -->
+  <!-- ogp, Twitter tags -->
+  <meta property="og:title" content="<?= $page->title ?>">
+  <meta property="og:description" content="<?= $page->description ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<?= $page->url ?>">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@<?= $page->author_twitter ?>">
+  <!-- /ogp, Twitter tags -->
+
+  <title><?= $page->title ?></title>
+  <link rel="canonical" href="<?= $page->url ?>">
+  <!-- Exte JS CSS -->
+  <link rel="stylesheet" href="/style.css" />
+  <!--<script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>-->
+  <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+  <!-- /Exte JS CSS -->
+</head>
+<body>
+<div id="loading" class="loading"><i class="fa fa-spinner fa-spin"></i></div>
+  <script>
+       const loading =  document.getElementById("loading");
+　　window.addEventListener('load', function () {
+　　loading.style.display = "none";
+　　});
+  </script>
+<div class="pages" id="contents">
+<h1><?= $page->title ?></h1>
+<!-- body -->
+ <div class="date-tags">
+<span class="fas fa-history" aria-hidden="true"></span> <span class="updated"><?= $page->modified ?></span> <span class="far fa-clock" aria-hidden="true"></span> <span class="published"><?= $page->created ?></span>
+</div>
+<p><?= $page->text_start ?></p>
+<?php
+foreach($page->text_common as $text ){
+echo "<p>$text</p>";
+}
+?>
+<p><?= $page->text_end ?></p>
+<!-- End body -->
+<footer>
+<div id="back-to-previous" class="back-to-previous" style="display:inline-block;">
+      <a href="javascript:history.go(-1);" class="back-to-previous-button"><span class="fas fa-arrow-left"></span></a>
+  </div>
+<div id="back-to-next" class="back-to-next" style="display:inline-block;">
+      <a href="javascript:history.go(+1);" class="back-to-next-button"><span class="fas fa-arrow-right"></span></a>
+  </div>
+<div id="home-menu" class="home-menu" style="display:inline-block;">
+      <a href="https://soratako.yunachannel.com/" class="home-menu-button"><span class="fas fa-home"></span></a>
+  </div>
+<div id="go-to-top" class="go-to-top" style="display:inline-block;">
+      <a class="go-to-top-button"><span class="fas fa-arrow-circle-up"></span></a>
+  </div>
+</footer>
+<script>
+//上部へスムームスクロールする
+const gototop = document.getElementById("go-to-top");
+gototop.addEventListener("click", goToTop, false);
+function goToTop() {
+var x1 = x2 = x3 = 0;
+var y1 = y2 = y3 = 0;
+if (document.documentElement) {
+x1 = document.documentElement.scrollLeft || 0;
+y1 = document.documentElement.scrollTop || 0;
+}
+if (document.body) {
+x2 = document.body.scrollLeft || 0;
+y2 = document.body.scrollTop || 0;
+}
+x3 = window.scrollX || 0;
+y3 = window.scrollY || 0;
+var x = Math.max(x1, Math.max(x2, x3));
+var y = Math.max(y1, Math.max(y2, y3));
+window.scrollTo(Math.floor(x / 2), Math.floor(y / 2));
+if (x > 0 || y > 0) {
+window.setTimeout("goToTop()", 80);
+}
+}
+</script>
+<script>
+//リファラ(アクセス元履歴)がない場合にボタン無効化
+window.addEventListener("load", historyDisable, false);
+function historyDisable(){
+    browsehistory = window.history;
+    let browsehistorycount = browsehistory.length - 1;
+    if ( browsehistorycount ) {
+	
+    }else{
+	const historybuttonprev = document.getElementById("back-to-previous");
+	const historybuttonnext = document.getElementById("back-to-next");
+	historybuttonprev.innerHTML = '<div id="fasdisabled" class="back-to-previous-button"><span class="fas fa-arrow-left"></span></div>';
+	historybuttonnext.innerHTML = '<div id="fasdisabled" class="back-to-next-button"><span class="fas fa-arrow-right"></span></div>';
+    }
+}
+</script>
+<script>
+//言語切り替え URLパラメータで判断
+/*
+window.onload = function() {
+const langparameter = location.search.substring(1);
+const langele = document.documentElement.getAttribute("lang");
+const langelelang = "hl=" + langele;
+const langja = document.getElementsByClassName("langja");
+const langen = document.getElementsByClassName("langen");
+const simple = document.getElementsByClassName("langjasimple");
+if (langparameter == langelelang) {
+ for(var i = 0; i < langen.length; i++) {
+ langen[i].style.display = "";
+ }
+ for(var i = 0; i < langja.length; i++) {
+ langja[i].style.display = "none";
+ }
+}else{
+ for(var i = 0; i < langen.length; i++) {
+ langen[i].style.display = "none";
+ }
+ for(var i = 0; i < langja.length; i++) {
+ langja[i].style.display = "";
+ }
+}
+}
+*/
+</script>
+<div class="footer">
+<p id="copyright">
+&copy;(C) 2020<script>new Date().getFullYear()><?= $page->created_year ?>&&document.write("-"+new Date().getFullYear());</script> <?= $page->author ?>.
+</p>
+</div>
+<!-- div contents -->
+</div>
+<!-- /div contents -->
+</body>
+</html>
