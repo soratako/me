@@ -6,11 +6,8 @@ RewriteCond %{THE_REQUEST} ^.*/index.(html|php)
 RewriteRule ^(.*)index.(html|php)$ https://%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^www.soratako.yunachannel.com$
 RewriteRule ^(.*)$ https://soratako.yunachannel.com/$1 [R=301,L]
-<Files ".composer.json">
-Deny from all
-</Files>
-<Files ".composer.lock">
-Deny from all
+<Files ~ "(composer\.json|composer\.lock)">
+deny from all
 </Files>
 ErrorDocument 400 /error/400/
 ErrorDocument 403 /error/403/
