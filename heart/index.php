@@ -30,7 +30,7 @@ class PageTemplate
         include $page->template;
     }
 }
-if (!empty($_GET["hl"])){
+//if (!empty($_GET["hl"])){
 if ($_GET["hl"] === "en"){
 $page = new PageTemplate();
 $page->title  = "My opinion about defamation (slanders and libels)";
@@ -48,7 +48,7 @@ Slandering others on the Internet is defamation. Defamation may result in compen
 $page->setText(__DIR__ . "/templates/heart_en.txt");
 $page->setTemplate(__DIR__ . "/templates/heart.html");
 $page->view();
-}
+//}
 }else{
 $page = new PageTemplate();
 $page->title  = "誹謗中傷に関するそらたこの考え";
@@ -61,7 +61,7 @@ $page->created = "2020.09.12";
 $page->created_year = "2020";
 $page->modified = "2021.01.10";
 $page->text_start = "2020年現在、インターネット上でよく見られる、「誹謗中傷」についてのそらたこの考えです。";
-$page->text_end = "インターネットで他人を誹謗中傷することは名誉毀損に当たります。名誉毀損をすると賠償を命じられる可能性があります。安易な発言が誹謗中傷とみなされて、賠償をしなければいけなくなります。インターネットでの誹謗中傷は、絶対にやめましょう。インターネットでの発言はしっかりと考えてしましょう。インターネットは便利なツールですが、非常に厄介で奥の深いツールでもあります。インターネットでは一度送信したことは取り消すことができません。永遠に残り続けます。投稿の削除やアカウントの削除をしても自分がした発言は完全には消えません。安易な発言は自分の身を滅ぼします。";
+$page->text_end = "インターネットで他人を誹謗中傷することは名誉毀損に当たります。名誉毀損をすると法的責任を問われたり、賠償を命じられたりする可能性があります。安易な発言が誹謗中傷とみなされて、賠償をしなければいけなくなります。インターネットでの誹謗中傷は、絶対にやめましょう。インターネットでの発言はしっかりと考えてしましょう。インターネットは便利なツールですが、非常に厄介で奥の深いツールでもあります。インターネットでは一度送信したことは取り消すことができません。永遠に残り続けます。投稿の削除やアカウントの削除をしても自分がした発言は完全には消えません。安易な発言は自分の身を滅ぼします。";
 $page->setText(__DIR__ . "/templates/heart.txt");
 $page->setTemplate(__DIR__ . "/templates/heart.html");
 $page->view();
